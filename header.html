@@ -9,27 +9,71 @@
 </head>
 <body>
     <header>
-        <nav class="menu__desktop">
-            <ul class="menu__desktop__list">
-                <li class="menu__desktop__item">
-                    <a href="" class="logo"><img src="./images/logo.png" alt=""></a>
-                </li>
-                <li class="menu__desktop__item">
-                    <a href="" class="menu__desktop__category">Danh mục <img src="./images/down-arrow.svg" alt="" class="down__icon__nav"></a>
-                </li>
-            </ul>
-        </nav>
-        <form class="search__desktop">
-            <button class="btn__search__desktop"><img src="./images/search-icon.svg" alt=""></button>
-            <input type="text">
-        </form>
-        <div class="group__btn__register">
-            <div class="group__btn__post"> <img src="./images/lightning-bolt.svg" alt="" class="icon__lightning"> Viết bài</div>
-            <div class="group__btn__sing">
-                <button class="signin">Đăng nhập</button>
-                <button class="signup">Đăng</button>
+        <div class="ctnr-fluid d-flex js-between ai-center header w-100">
+            <nav class="menu__desktop">
+                <ul class="menu__desktop__list d-flex ai-center">
+                    <li class="menu__desktop__item">
+                        <a href="" class="logo"><img src="./images/logo.png" alt=""></a>
+                    </li>
+                    <li class="menu__desktop__item p-relative ">
+                        <a href="#" class="menu__desktop__category" onclick="toggleCategories()">
+                            Danh mục <img src="./images/down-arrow.svg" alt="" class="down__icon__nav">
+                        </a>
+                      
+                        <div class="menu__desktop__all__category p-absolute" id="categories">
+                            <h2 class="title__category" >Danh Mục</h2>
+                            <ul class="list__categories d-flex w-100 fw-wrap" >
+                                <li class="categories__item">
+                                    <a href="">Danh mục 1</a>
+                                </li>
+                                <li class="categories__item">
+                                    <a href="">Danh mục 1</a>
+                                </li>
+                                <li class="categories__item">
+                                    <a href="">Danh mục 1</a>
+                                </li>
+                                <li class="categories__item">
+                                    <a href="">Danh mục 1</a>
+                                </li>
+                                <li class="categories__item">
+                                    <a href="">Danh mục 1</a>
+                                </li>
+                                <li class="categories__item">
+                                    <a href="">Danh mục 1</a>
+                                </li>
+                                <li class="categories__item">
+                                    <a href="">Danh mục 1</a>
+                                </li>
+                                <li class="categories__item">
+                                    <a href="">Danh mục 1</a>
+                                </li>
+                                <li class="categories__item">
+                                    <a href="">Danh mục 1</a>
+                                </li>
+                                <li class="categories__item">
+                                    <a href="">Danh mục 1</a>
+                                </li>
+                                <li class="categories__item">
+                                    <a href="">Danh mục 1</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <form class="search__desktop d-flex">
+                <button class="btn__search__desktop"><img src="./images/search-icon.svg" alt=""></button>
+                <input type="text" placeholder="Tìm kiếm">
+            </form>
+            <div class="group__btn__register d-flex">
+                <div class="group__btn__post d-flex ai-center"> <img src="./images/lightning-bolt.svg" alt="" class="icon__lightning"><a href=""> Viết bài</a></div>
+                <div class="group__btn__sing">
+                    <button class="signin"><a href="">Đăng nhập</a></button>
+                    <button class="signup"><a href="">Đăng ký</a></button>
+                </div>
             </div>
         </div>
     </header>
+    <script src="./js-m/main.js"></script>
 </body>
 </html>

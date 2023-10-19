@@ -76,7 +76,7 @@ html{
 }
 @media (min-width: 1200px){
   :root{
-    --container: 1140px;
+    --container: 1160px;
     --container-fluid-gutter: 15px;
     --gutter: 15px;
 

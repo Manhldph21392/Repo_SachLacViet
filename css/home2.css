@@ -1,3 +1,8 @@
+
+@import url('https://fonts.cdnfonts.com/css/source-sans-pro');
+.box-discovereds:hover .discovereds-name {
+    color: #00b2b2;
+}
 .discovered .box-alls-discovereds {
     display: flex;
     justify-content: space-between;
@@ -44,6 +49,8 @@
 .discovereds-name {
     font-size: var(--fs-h5);
     margin: 12px 0;
+    font-weight: bolder;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .discovereds-desc {
@@ -73,6 +80,8 @@
     -webkit-line-clamp: 3;
     overflow: hidden;
     text-overflow: ellipsis;
+    font-weight: 600;
+    color: #6f6f6f;
 }
 
 
@@ -102,9 +111,9 @@
 }
 
 @media (min-width: 992px) {
-    .discovered {
-        padding-top: 70px;
-    }
+ .discovered {
+    padding-top: 70px;
+}
 }
 
 @media (min-width: 1200px) {}

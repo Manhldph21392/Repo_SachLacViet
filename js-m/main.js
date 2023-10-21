@@ -14,3 +14,23 @@ iconMenuMobile.addEventListener("click", function () {
     isMenuMobileVisible = true;
   }
 });
+//categoty mobile
+
+
+// search mobile
+function toggleSearchMobile() {
+  var categories = document.getElementById("categories");
+  var inputSearch = document.querySelector(".input__search__mobile input");
+
+  if (categories.style.display === "block") {
+    categories.style.display = "none";
+    inputSearch.style.display = "block";
+  } else {
+    categories.style.display = "block";
+    inputSearch.style.display = "none";
+  }
+}
+
+document.querySelector(".btn__search__mobile button").addEventListener("click", function() {
+  toggleSearchMobile();
+});

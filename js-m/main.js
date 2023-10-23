@@ -15,22 +15,34 @@ iconMenuMobile.addEventListener("click", function () {
   }
 });
 //categoty mobile
+function toggleMenuMobileCategory() {
+  const menuMobileAllCategory = document.querySelector(".menu__mobile__all__category");
+  menuMobileAllCategory.classList.toggle("active");
+}
 
 
 // search mobile
-function toggleSearchMobile() {
-  var categories = document.getElementById("categories");
-  var inputSearch = document.querySelector(".input__search__mobile input");
+const iconSearch = document.querySelector(".btn__search__mobile");
+const searchInput = document.querySelector(".input__search__mobile");
+const documentBody = document.body;
 
-  if (categories.style.display === "block") {
-    categories.style.display = "none";
-    inputSearch.style.display = "block";
-  } else {
-    categories.style.display = "block";
-    inputSearch.style.display = "none";
+iconSearch.addEventListener("click", function (e) {
+  e.stopPropagation(); // Ngăn chặn sự kiện click từ việc lan truyền lên đến document
+
+  searchInput.classList.toggle("active");
+  documentBody.classList.toggle("search-active");
+
+  // Thêm một event listener cho sự kiện click trên document
+  document.addEventListener("click", closeSearchOnOutsideClick);
+});
+
+function closeSearchOnOutsideClick(e) {
+  // Kiểm tra xem sự kiện click không phải từ iconSearch hoặc searchInput
+  if (!iconSearch.contains(e.target) && !searchInput.contains(e.target)) {
+    searchInput.classList.remove("active");
+    documentBody.classList.remove("search-active");
+
+    // Gỡ bỏ event listener khi không cần thiết nữa
+    document.removeEventListener("click", closeSearchOnOutsideClick);
   }
 }
-
-document.querySelector(".btn__search__mobile button").addEventListener("click", function() {
-  toggleSearchMobile();
-});

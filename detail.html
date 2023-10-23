@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/detail.css" />
+    <link rel="stylesheet" href="css/utilities.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <section class="filter ctnr">
+      <div class="box-filter">
+        <div class="title-filter">
+          <h1>Fanfiction Stories</h1>
+        </div>
+        <div class="tags-filter">
+          <div class="refine">Refine by tag:</div>
+          <div class="component-filter">
+            <div class="carousel-filter">
+              <div class="item-tags">
+                <div class="box-alls-filter">
+                  <a href="" class="icon-filter">
+                    <span class="title-icon-filter">fanfiction</span>
+                    <span class="span-icon-filter"
+                      ><i class="fas fa-plus"></i
+                    ></span>
+                  </a>
+
+                  <a href="" class="icon-filter">
+                    <span class="title-icon-filter">btsfanfic</span>
+                    <span class="span-icon-filter"
+                      ><i class="fas fa-plus"></i
+                    ></span>
+                  </a>
+
+                  <a href="" class="icon-filter">
+                    <span class="title-icon-filter">bts</span>
+                    <span class="span-icon-filter"
+                      ><i class="fas fa-plus"></i
+                    ></span>
+                  </a>
+
+                  <a href="" class="icon-filter">
+                    <span class="title-icon-filter">jungkook</span>
+                    <span class="span-icon-filter"
+                      ><i class="fas fa-plus"></i
+                    ></span>
+                  </a>
+
+                  <a href="" class="icon-filter">
+                    <span class="title-icon-filter">taehyung</span>
+                    <span class="span-icon-filter"
+                      ><i class="fas fa-plus"></i
+                    ></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="list-limits">
+        <div class="stories">
+          <div class="stors">
+            <span>568 Stories</span>
+          </div>
+          <div class="stors-by">
+            <button class="btn-stors-bys" onclick="toggleSortList()">
+              <span>Sort by: Hot</span>
+              <i class="fas fa-caret-down"></i>
+            </button>
+            <ul class="button-filer-sort" id="sortList">
+              <li>
+                <a href=""
+                  >Hot
+                  <i class="far fa-check-circle"></i>
+                </a>
+              </li>
+              <li>
+                <a href=""
+                  >Hot
+                  <i class="far fa-check-circle"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="box-alls-heros">
+            <div class="list-hero-item">
+                <div class="lis-cover">
+                  <a href=""><img src="images/limit.jpg" alt=""></a>
+                </div>
+                <div class="hero-content">
+                  <a href="" class="titls-hero">The Blood Ruby (The Arcane Artifacts #2)</a>
+                  <p class="heros-contents">
+                    Season 2 of The Arcane Artifacts Growing up in the foster care
+                    system, Lily's life has never been easy. In fact, it's been
+                    downright horrific at times. But she's finally in a good place,
+                    ready to pursue her master's degree in the fall. Until she's
+                    abducted at a graduation party by Laurent, a vampire both
+                    otherworldly beautiful and inhumanly cold, endangering her life
+                    and everything she's worked for. She's never been important to
+                    anyone, so why does he want her so badly? And why does his
+                    touch...
+                  </p>
+                  <div class="list-tag-hero">
+                      <a href="">enemiestolovers</a>
+                      <a href="">enemiestolovers</a>
+                      <a href="">enemiestolovers</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="list-hero-item">
+                <div class="lis-cover">
+                  <a href=""><img src="images/limit.jpg" alt=""></a>
+                </div>
+                <div class="hero-content">
+                  <a href="" class="titls-hero">The Blood Ruby (The Arcane Artifacts #2)</a>
+                  <p class="heros-contents">
+                    Season 2 of The Arcane Artifacts Growing up in the foster care
+                    system, Lily's life has never been easy. In fact, it's been
+                    downright horrific at times. But she's finally in a good place,
+                    ready to pursue her master's degree in the fall. Until she's
+                    abducted at a graduation party by Laurent, a vampire both
+                    otherworldly beautiful and inhumanly cold, endangering her life
+                    and everything she's worked for. She's never been important to
+                    anyone, so why does he want her so badly? And why does his
+                    touch...
+                  </p>
+                  <div class="list-tag-hero">
+                      <a href="">enemiestolovers</a>
+                      <a href="">enemiestolovers</a>
+                      <a href="">enemiestolovers</a>
+                  </div>
+                </div>
+              </div>
+        </div>
+        
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const icons = document.querySelectorAll(".icon-filter");
+
+        icons.forEach(function (icon) {
+          icon.addEventListener("click", function (event) {
+            event.preventDefault(); // Ngăn chặn hành động mặc định của thẻ <a>
+
+            // Kiểm tra xem lớp 'active' đã tồn tại hay không
+            if (icon.classList.contains("filler-act")) {
+              icon.classList.remove("filler-act"); // Nếu có, thì xóa lớp 'active'
+            } else {
+              icon.classList.add("filler-act"); // Nếu không có, thì thêm lớp 'active'
+            }
+          });
+        });
+      });
+    </script>
+
+    <script>
+      function toggleSortList() {
+        const sortList = document.getElementById("sortList");
+
+        if (
+          sortList.style.display === "block" ||
+          sortList.style.display === ""
+        ) {
+          sortList.style.display = "none";
+        } else {
+          sortList.style.display = "block";
+        }
+      }
+    </script>
+  </body>
+</html>

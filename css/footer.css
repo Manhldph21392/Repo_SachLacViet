@@ -1,0 +1,41 @@
+
+@import url('https://fonts.cdnfonts.com/css/source-sans-pro');
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.box-all-footers ul {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+
+.footer-contact-top li {
+    list-style: none;
+    line-height: 24px;
+}
+
+.footer-contact-top li a {
+    text-decoration: none;
+    margin-left: 8px;
+    margin-right: 8px;
+    color: #000;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.footer-contact-botom li {
+    list-style: none;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.footer-contact-botom li a {
+    text-decoration: none;
+    color: #6f6f6f;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.footer-contact-botom li .wattpad {
+    font-weight: 500;
+}

@@ -94,6 +94,7 @@ body {
     top: 41px;
     left: 0;
     display: none;
+    background: var(--bg-primary);
 
 }
 
@@ -200,7 +201,7 @@ body {
 }
 
 
-.btn__search__mobile button {
+.btn__search__mobile {
     background: no-repeat;
     padding: 0;
 }
@@ -226,11 +227,12 @@ body {
 
 .menu__mobile__all__category {
     width: 98%;
-    left: 3px;
-    top: 70px;
+    left: 6px;
+    top: 60px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     padding: 7.5px 15px 15px;
     display: none;
+    background: var(--bg-primary);
 }
 
 /* banner */
@@ -256,6 +258,7 @@ body {
     font-family: "Sans pro";
     margin-bottom: 40px;
     margin-top: 20px;
+    color: var(--colors-5);
 }
 
 .banner__btn button {
@@ -265,6 +268,7 @@ body {
     background: var(--colors-1);
     color: var(--bg-primary);
     font-size: var(--fs-body);
+    margin-bottom: 10px;
 }
 
 .btn__reading {
@@ -275,14 +279,34 @@ body {
     margin-top: 100px;
 }
 
+
+.banner__box .row {
+    flex-direction: column-reverse;
+}
+
 .banner {
     background-image: url(../images/img-right-banner.svg);
     background-position: right top;
     background-repeat: no-repeat;
-    background-size: auto 100%;
-    padding: 100px 0 40px;
+    background-size: auto 50%;
+    padding: 0px 0 40px;
+}
+.categories__item:hover {
+    font-weight: bold;
+}
+.search-active .input__search__mobile {
+    display: block;
+}
+.search-active .categories__mobile{
+display: none;
+}
+.menu__mobile__all__category {
+    display: none;
 }
 
+.menu__mobile__all__category.active {
+    display: block;
+}
 @media(min-width:576px) {
     .logo__mobile img {
         width: 34px;
@@ -355,6 +379,15 @@ body {
     .categories__item {
         border: none;
     }
+    .banner__box .row {
+        flex-direction: column-reverse;
+    }
+    
+    .banner {
+        background-size: auto 50%;
+        padding: 0px 0 40px;
+    }
+
 }
 
 @media(min-width:768px) {
@@ -382,6 +415,16 @@ body {
 
     .header__mobile {
         display: none;
+    }
+    .banner__box .row {
+        flex-direction: row;
+    }
+    .banner {
+        background-size: auto 80%;
+        padding: 100px 0 40px;
+    }
+    .menu__desktop__all__category{
+        left: -130px;
     }
 }
 

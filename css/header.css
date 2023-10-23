@@ -307,6 +307,14 @@ display: none;
 .menu__mobile__all__category.active {
     display: block;
 }
+.search-input {
+    width: 100%;
+    padding: 10px;
+}
+
+.search-input:focus {
+    outline: none;
+}
 @media(min-width:576px) {
     .logo__mobile img {
         width: 34px;
